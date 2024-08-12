@@ -81,10 +81,12 @@ else:
 
 ## Original Picture
 ![image](https://github.com/user-attachments/assets/0bef8b6d-0459-42e4-aa27-55f1d4110ed6)
+
 ![image](https://github.com/user-attachments/assets/f100ff69-e87a-45a4-895d-8367abfe50af)
 
 
 
 ## Detected Crack 
 ![detected_crack](https://github.com/user-attachments/assets/5b5797af-8c40-4dd9-818f-82a13c35a495)
+
 ![detected_crack](https://github.com/user-attachments/assets/f5a88555-26d4-42bb-b4c6-70f41cf3804f)
