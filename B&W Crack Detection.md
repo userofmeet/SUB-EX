@@ -79,6 +79,7 @@ else:
     cv2.waitKey()
 ```
 
+
 ## Original Picture
 ![image](https://github.com/user-attachments/assets/0bef8b6d-0459-42e4-aa27-55f1d4110ed6)
 
