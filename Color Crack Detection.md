@@ -46,7 +46,7 @@ gray_image = gray_image/255.0
 blur = cv2.GaussianBlur(gray_image, (kernel, kernel), sigma)
 gray_image = cv2.subtract(gray_image, blur)
 
-# Compute sobel response
+# Compute sobel response 
 sobelx = cv2.Sobel(gray_image, cv2.CV_64F, 1, 0, ksize=3)
 sobely = cv2.Sobel(gray_image, cv2.CV_64F, 0, 1, ksize=3)
 mag = np.hypot(sobelx, sobely)
