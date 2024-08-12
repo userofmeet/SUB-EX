@@ -70,7 +70,7 @@ contours, _ = cv2.findContours(mag, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 # Draw rectangles around contours on the original color image
 for cnt in contours:
     x, y, w, h = cv2.boundingRect(cnt)
-    cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0), 2)
+    cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0), 2)  # (0, 255, 0) for green squares and (0, 0, 255) for red squares
 
 # Display the color image with rectangles
 cv2.imshow('Detected Edges', image)
