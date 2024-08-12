@@ -90,9 +90,11 @@ cv2.destroyAllWindows()
 
 ## Original Picture
 ![d](https://github.com/user-attachments/assets/ccb18431-b364-46bc-b1b5-7a46f6214c5e)
+
 ![image](https://github.com/user-attachments/assets/821ff51e-d8b2-4e8f-bea3-82154f0045bc)
 
 
 ## Cracks Detected
 ![detected_crack](https://github.com/user-attachments/assets/3d4ef729-3cd0-46f2-9de7-b5fec2cec4c2)
+
 ![detected_crack](https://github.com/user-attachments/assets/f743196b-fe66-4a10-9f44-d9c6a7f76f4c)
