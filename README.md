@@ -1,10 +1,10 @@
 # SUB-EX
-This repository contains all the codes used to develop SUB-EX (Submarine Explorer for Underwater Body EXamination), a SSIP project developed by Meet Jain and Co. 
+This repository contains all the codes used to develop SUB-EX (Submarine Explorer for Underwater Body EXamination), a project developed by Meet Jain and Co. 
 
 ## Abstract 
 SUB-EX (Submarine Explorer for Underwater Body EXamination) outlines a project to develop and deploy a 3D-printed underwater submarine designed for inspection and surveillance of submerged constructions and buildings. The submarine is capable of navigating underwater environments to monitor various parameters and provide live video feed to the pilot's screen. SUB-EX aims to enhance the safety and efficiency of underwater inspections by delivering real-time, high-quality visual and data feedback. With potential applications in civil engineering, maintenance of underwater structures like bridges and dams, this project seeks to secure a grant to advance its development, ensuring robust and reliable performance in diverse underwater conditions.
 
-## Objeectives
+## Objectives
 The objective of SUB-EX is to create a robust, 3D-printed underwater submarine equipped with advanced sensors and high-resolution cameras capable of conducting detailed inspections of various underwater constructions, including dams, bridges, pipelines, and dockyards. This advanced system aims to enhance the safety, efficiency, and cost-effectiveness of underwater infrastructure management.
 •	The submarine is constructed using cutting-edge 3D printing technology, which allows for a lightweight, customizable, and durable design. The use of waterproof and corrosion-resistant materials ensures the system's robustness in harsh underwater environments. The modular design facilitates easy upgrades and maintenance, ensuring long-term adaptability and scalability.
 •	SUB-EX implements advanced navigation and algorithms to enable the submarine to navigate the complex underwater environments so as to conduct comprehensive inspections.
