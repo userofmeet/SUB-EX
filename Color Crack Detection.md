@@ -33,7 +33,6 @@ def non_max_suppression(data, win):
     data_max[data != data_max] = 0
     return data_max
 
-# Load the original color image
 image = cv2.imread(r'C:\Users\djain\Downloads\a.png')
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
@@ -56,27 +55,21 @@ ang = np.arctan2(sobely, sobelx)
 threshold = 4 * fudgefactor * np.mean(mag)
 mag[mag < threshold] = 0
 
-# Apply non-maximal suppression
 if with_nmsup:
     mag = orientated_non_max_suppression(mag, ang)
 
-# Create mask for edges
 mag[mag > 0] = 255
 mag = mag.astype(np.uint8)
 
-# Find contours based on edges
 contours, _ = cv2.findContours(mag, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-# Draw rectangles around contours on the original color image
 for cnt in contours:
     x, y, w, h = cv2.boundingRect(cnt)
     cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0), 2)  # (0, 255, 0) for green squares and (0, 0, 255) for red squares
 
-# Display the color image with rectangles
 cv2.imshow('Detected Edges', image)
 cv2.waitKey(0)
 
-# Save the image with rectangles
 k = cv2.waitKey(0) & 0xFF
 if k == 27:
     cv2.destroyAllWindows()
