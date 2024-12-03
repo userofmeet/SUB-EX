@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 import time
 
-#Enter your COM port from device manager
+# Enter your COM port from device manager
 ser = serial.Serial('COM7', 9600, timeout=1)
 time.sleep(2)
 
