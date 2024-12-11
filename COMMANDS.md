@@ -50,16 +50,3 @@ libcamera-jpeg -o test.jpg
 sudo apt install python3-matplotlib
 ```
 
-## 
-```
-sudo apt install build-essential libjpeg62-turbo-dev imagemagick libv4l-dev git cmake -y
-```
-
-##
-```
-git clone https://github.com/jacksonliam/mjpg-streamer.git
-```
-
-##
-```
-```
