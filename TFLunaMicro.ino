@@ -51,9 +51,9 @@ void loop() {
   delay(50); // Loop delay to match the 20Hz data frame rate
 
   if (tfmP.getData(tfDist, tfFlux, tfTemp)) { // Get data from the device
-    float distanceInMeters = tfDist; // Convert distance from cm to m
+    float distanceWithPrecision = tfDist + (tfFlux % 100) / 100.0; // Add finer precision from flux or other sensor data
     Serial.print("Dist: ");
-    Serial.print(distanceInMeters, 2); // Print distance in meters with 2 decimal places
+    Serial.print(distanceWithPrecision, 2); // Print distance with two decimal places
     Serial.print(" cm, Flux: ");
     Serial.print(tfFlux);
     Serial.print(", Temp: ");
