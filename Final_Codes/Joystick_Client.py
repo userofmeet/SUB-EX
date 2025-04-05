@@ -1,3 +1,4 @@
+# This code is executed in the base station and is used to read and send the inputs of LOGITECH F310 Controller used in SUB-EX
 import pygame
 import socket
 import time
