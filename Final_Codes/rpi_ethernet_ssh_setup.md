@@ -35,6 +35,10 @@ If your RPi is freshly booted then run this command in the CMD or PowerShell to 
 ```bash
 ssh-keygen -R raspberry.local
 ```
+or
+```bash
+ssh-keygen -R 192.168.137.2
+```
 ## 🧰 Step 4: Enable and Configure dhcpcd on Raspberry Pi
 
 Check the status of `dhcpcd`:
