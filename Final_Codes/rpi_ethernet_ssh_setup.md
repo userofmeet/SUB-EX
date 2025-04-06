@@ -37,6 +37,7 @@ This guide explains how to share your laptop's internet connection with a Raspbe
 Check the status of `dhcpcd`:
 
 ```bash
+sudo apt update && sudo apt upgrade -y
 sudo systemctl status dhcpcd
 ```
 If it’s inactive or not found, run the following commands:
