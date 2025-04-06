@@ -31,10 +31,14 @@ This guide explains how to share your laptop's internet connection with a Raspbe
    - Leave other fields blank and click **OK**.
 
 ---
-
+If your RPi is freshly booted then run this command to remove the old key
+```bash
+ssh-keygen -R raspberry.local
+```
 ## 🧰 Step 4: Enable and Configure dhcpcd on Raspberry Pi
 
 Check the status of `dhcpcd`:
+
 
 ```bash
 sudo apt update && sudo apt upgrade -y
