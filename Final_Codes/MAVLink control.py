@@ -1,6 +1,8 @@
 # This code will let you take inputs from the Logitech F310 controller and will pass it to the pixhawk flight controller connected via
 # a simple microusb cable and hence reducing the hardware complexity. This code will also stream the live video feed using the mjpeg 
 # stream and will stream on the ip address of rpi and the 8080 port
+
+
 import socket
 import json
 import cv2
