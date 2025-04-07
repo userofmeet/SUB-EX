@@ -46,9 +46,7 @@ Check the status of `dhcpcd`:
 
 ```bash
 sudo apt update && sudo apt upgrade -y
-
 sudo apt install -y v4l-utils
-
 sudo apt install -y python3-picamera2
 sudo apt install -y python3-numpy
 sudo apt install -y python3-opencv
