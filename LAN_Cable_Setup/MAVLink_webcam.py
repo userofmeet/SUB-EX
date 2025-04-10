@@ -11,13 +11,13 @@ from pymavlink import mavutil
 
 app = Flask(__name__)
 
-# ---------- Webcam Setup ----------
+# Webcam Setup 
 cap = cv2.VideoCapture(0)  # 0 is usually the default webcam
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
 time.sleep(2)
 
-# ---------- Crack Detection Functions ----------
+# Crack Detection 
 def orientated_non_max_suppression(mag, ang):
     ang_quant = np.round(ang / (np.pi / 4)) % 4
     winE = np.array([[0, 0, 0], [1, 1, 1], [0, 0, 0]])
@@ -41,7 +41,7 @@ def non_max_suppression(data, win):
     data_max[data != data_max] = 0
     return data_max
 
-# ---------- MJPEG Streaming ----------
+# Livestream the video feed
 def generate_frames():
     prev_time = time.time()
     frame_count = 0
@@ -83,7 +83,7 @@ def generate_frames():
             x, y, w, h = cv2.boundingRect(cnt)
             cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
-        # FPS Overlay
+        # FPS 
         current_time = time.time()
         frame_count += 1
         if current_time - prev_time >= 1.0:
@@ -110,7 +110,7 @@ def video_feed():
     return Response(generate_frames(),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
-# ---------- Joystick + Pixhawk Communication ----------
+# MAVLink
 def joystick_to_pixhawk():
     try:
         master = mavutil.mavlink_connection('/dev/ttyACM0', baud=57600)
@@ -150,12 +150,9 @@ def joystick_to_pixhawk():
 
         except Exception as e:
             print("⚠️ Error in joystick handler:", e)
-
-# ---------- Threading and LAN Binding ----------
+            
 if __name__ == '__main__':
     thread = threading.Thread(target=joystick_to_pixhawk)
     thread.daemon = True
     thread.start()
-
-    # Stream ONLY on static LAN IP (adjust if different)
     app.run(host='192.168.137.2', port=8080)
