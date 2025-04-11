@@ -23,6 +23,6 @@ SUB-EX is a vital tool totally meant for underwater infrastructure management, s
 •	It can be deployed across multiple industries to inspect diverse underwater environments, from dams and bridges to dockyards and pipelines.
 Overall SUB-EX is an emerging tool meant for underwater infrastructure management, ensuring secure, reliable and sustainable infrastructure for the country.
 
-## SSIP Proposal Letter 
+## SSIP Approval Letter 
 ![image](https://github.com/user-attachments/assets/a3db0609-7a14-4e0a-8e58-9c845b9e08e7)
 
