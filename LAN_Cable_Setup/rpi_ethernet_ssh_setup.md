@@ -91,7 +91,6 @@ sudo nano /boot/firmware/config.txt
 ```
 Add the following lines at the end:
 ```bash
-[all]
 dtoverlay=disable-wifi
 ```
 ---
