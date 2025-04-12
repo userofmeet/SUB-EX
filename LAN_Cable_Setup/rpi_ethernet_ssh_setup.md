@@ -51,6 +51,7 @@ sudo apt install python3-pip
 pip3 install flask --break-system-packages
 sudo apt install fswebcam -y
 pip3 install pymavlink --break-system-packages
+sudo apt install python3-serial python3-matplotlib
 ```
 
 ## 🧰 Step 4: Enable and Configure dhcpcd on Raspberry Pi
