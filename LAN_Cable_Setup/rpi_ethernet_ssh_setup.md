@@ -39,11 +39,7 @@ or
 ```bash
 ssh-keygen -R 192.168.137.2
 ```
-## 🧰 Step 4: Enable and Configure dhcpcd on Raspberry Pi
-
-Check the status of `dhcpcd`:
-
-
+Update your Raspberry Pi and use the following commands to update your RPi to use the codes in this repository:
 ```bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y v4l-utils
@@ -53,7 +49,14 @@ sudo apt install -y python3-opencv
 sudo apt install -y python3-scipy
 sudo apt install python3-pip
 pip3 install flask --break-system-packages
+sudo apt install fswebcam -y
+pip3 install pymavlink --break-system-packages
 ```
+
+## 🧰 Step 4: Enable and Configure dhcpcd on Raspberry Pi
+
+Check the status of `dhcpcd`:
+
 ```bash
 sudo systemctl status dhcpcd
 ```
