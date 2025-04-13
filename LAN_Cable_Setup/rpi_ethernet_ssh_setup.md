@@ -47,12 +47,15 @@ sudo apt install -y python3-picamera2
 sudo apt install -y python3-numpy
 sudo apt install -y python3-opencv
 sudo apt install -y python3-scipy
+pip3 install matplotlib --break-system-packages
 sudo apt install python3-pip
 pip3 install flask --break-system-packages
 sudo apt install fswebcam -y
 pip3 install pymavlink --break-system-packages
 sudo apt install python3-serial python3-matplotlib
 sudo apt-get install x11-apps
+pip install asciichartpy --break-system-packages
+pip install plotext --break-system-packages
 ```
 
 ## 🧰 Step 4: Enable and Configure dhcpcd on Raspberry Pi
