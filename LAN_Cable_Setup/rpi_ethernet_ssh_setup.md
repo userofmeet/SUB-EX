@@ -57,7 +57,10 @@ sudo apt-get install x11-apps
 pip install asciichartpy --break-system-packages
 pip install plotext --break-system-packages
 ```
-
+To test if the webcam is working or not
+``` bash
+fswebcam image.jpg
+```
 ## 🧰 Step 4: Enable and Configure dhcpcd on Raspberry Pi
 
 Check the status of `dhcpcd`:
