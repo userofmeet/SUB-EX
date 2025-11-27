@@ -1,11 +1,9 @@
 #include <Servo.h>
 
-// Define servo objects for thrusters
-Servo thrusterLeft;     // Left forward thruster
-Servo thrusterRight;    // Right forward thruster
-Servo thrusterVertical; // Vertical thruster
+Servo thrusterLeft;     
+Servo thrusterRight;    
+Servo thrusterVertical; 
 
-// Pin definitions
 const int PIN_LEFT = 3;
 const int PIN_RIGHT = 5;
 const int PIN_VERTICAL = 6;
@@ -18,29 +16,23 @@ int speedVertical = 0;
 void setup() {
   Serial.begin(115200);
   
-  Serial.println("=================================");
   Serial.println("Arduino Reset Detected!");
-  Serial.println("IMPORTANT: Do NOT connect battery yet!");
+  Serial.println("IMPORTANT: DO NOT CONNECT THE BATTERY BRUH!");
   Serial.println("Waiting 3 seconds...");
-  Serial.println("=================================");
   delay(3000);
   
-  // Attach servos
   thrusterLeft.attach(PIN_LEFT);
   thrusterRight.attach(PIN_RIGHT);
   thrusterVertical.attach(PIN_VERTICAL);
   
-  // Start at STOP position (0 = motors OFF)
   Serial.println("Setting all motors to OFF position...");
   thrusterLeft.write(0);
   thrusterRight.write(0);
   thrusterVertical.write(0);
   
   Serial.println("");
-  Serial.println("=================================");
   Serial.println("NOW connect the battery!");
   Serial.println("ESCs will beep to confirm arming.");
-  Serial.println("=================================");
   
   // Wait for ESCs to arm (listen for beeps)
   delay(5000);
