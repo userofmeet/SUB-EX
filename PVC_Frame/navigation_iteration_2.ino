@@ -1,16 +1,13 @@
 #include <Servo.h>
 
-// Define servo objects for thrusters
-Servo thrusterLeft;     // Left forward thruster
-Servo thrusterRight;    // Right forward thruster
-Servo thrusterVertical; // Vertical thruster
+Servo thrusterLeft;     
+Servo thrusterRight;   
+Servo thrusterVertical; 
 
-// Pin definitions
 const int PIN_LEFT = 3;
 const int PIN_RIGHT = 5;
 const int PIN_VERTICAL = 6;
 
-// Thruster speed variables (0-180)
 int speedLeft = 0;
 int speedRight = 0;
 int speedVertical = 0;
@@ -18,31 +15,25 @@ int speedVertical = 0;
 void setup() {
   Serial.begin(115200);
   
-  Serial.println("=================================");
   Serial.println("Arduino Reset Detected!");
-  Serial.println("IMPORTANT: Do NOT connect battery yet!");
+  Serial.println("DONT CONNECT THE BATTERY");
   Serial.println("Waiting 3 seconds...");
-  Serial.println("=================================");
   delay(3000);
   
-  // Attach servos
   thrusterLeft.attach(PIN_LEFT);
   thrusterRight.attach(PIN_RIGHT);
   thrusterVertical.attach(PIN_VERTICAL);
   
-  // Start at STOP position (0 = motors OFF)
-  Serial.println("Setting all motors to OFF position...");
+  Serial.println(" all motors to OFF position...");
   thrusterLeft.write(0);
   thrusterRight.write(0);
   thrusterVertical.write(0);
   
   Serial.println("");
-  Serial.println("=================================");
-  Serial.println("NOW connect the battery!");
+  Serial.println("CONNECT BATTERY");
   Serial.println("ESCs will beep to confirm arming.");
-  Serial.println("=================================");
   
-  // Wait for ESCs to arm (listen for beeps)
+  // Wait for ESCs to arm 
   delay(5000);
   
   Serial.println("");
@@ -58,7 +49,6 @@ void loop() {
     String data = Serial.readStringUntil('\n');
     data.trim();
     
-    // Parse: Left,Right,Vertical
     int firstComma = data.indexOf(',');
     int secondComma = data.indexOf(',', firstComma + 1);
     
@@ -67,17 +57,14 @@ void loop() {
       speedRight = data.substring(firstComma + 1, secondComma).toInt();
       speedVertical = data.substring(secondComma + 1).toInt();
       
-      // Constrain to 0-180 range
       speedLeft = constrain(speedLeft, 0, 180);
       speedRight = constrain(speedRight, 0, 180);
       speedVertical = constrain(speedVertical, 0, 180);
       
-      // Write directly
       thrusterLeft.write(speedLeft);
       thrusterRight.write(speedRight);
       thrusterVertical.write(speedVertical);
       
-      // Feedback
       Serial.print("Thrusters -> L:");
       Serial.print(speedLeft);
       Serial.print(" R:");
